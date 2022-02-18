@@ -1,6 +1,6 @@
 //___FILEHEADER___
 
-import Foundation
+import SwiftUI
 import AtomicMVVM
 
 // MARK: - UIKit oriented AtomicViewModel.
@@ -11,13 +11,13 @@ final class ___FILEBASENAME___: AtomicViewModel {
     // MARK: - Dependencies - uncomment if not using Void.
 
     // let dependencies: Dependencies
-    
-    // MARK: - Lifecycle.
+    @State
+    var emitted: Emitted = Emitted()
 
+    // MARK: - Lifecycle.
+    
     required init(context: Context, dependencies: Dependencies) {
-        // Use context to set internal state of the ViewModel.
-        
-        // Restore if dependencies are not Void.
+        // Restore if context and dependencies are not Void
         // self.dependencies = dependencies
     }
 
@@ -37,12 +37,19 @@ extension ___FILEBASENAME___ {
 
 }
 
+// MARK: - ObservableObject implementation for SwiftUI usage.
+
+extension ___FILEBASENAME___: ObservableObject {}
+
 // MARK: - Helper types. They can also be inferred from ViewModel if you set them correctly.
 
 extension ___FILEBASENAME___ {
 
     typealias Context = Void
     typealias Dependencies = Void
+    // SwiftUI module should use simple types for Emitted, without additional mechanism for binding.
+    // Binding mechanism is already provided by @State var emitted: Emitted = Emitted().
+    // In views please just use values directly from emitted variable.
     typealias Emitted = Void
     typealias Listened = Void
 
