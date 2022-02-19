@@ -10,7 +10,7 @@ final class ___FILEBASENAME___: UIViewController, AtomicView {
 
     init(viewModel: ___VARIABLE_productName:identifier___ViewModel) {
         self.viewModel = viewModel
-        super.init(nibName: String(describing: Self.self), bundle: nil)
+        super.init(nibName: nil, bundle: nil)
     }
 
     @available (*, unavailable)
