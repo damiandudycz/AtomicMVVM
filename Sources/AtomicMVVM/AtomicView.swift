@@ -1,4 +1,4 @@
-public protocol AtomicView: ContainsViewModel, Emits, Listens, AnyAtomicView where Emitted == ViewModel.Listenned, Listenned == ViewModel.Emitted {
+public protocol AtomicView: ContainsViewModel, Emits, Listens where Emitted == ViewModel.Listenned, Listenned == ViewModel.Emitted {
     /// To be called when view is ready for binding with viewModel. For example in viewDidLoad if you use UIViewControllers
     /// or in init if you are using SwiftUI.
     func setupViewModel()
@@ -40,6 +40,3 @@ public extension AtomicView where ViewModel.Context == Void, ViewModel.Dependenc
         self.init(viewModel: .init())
     }
 }
-
-// Blind type.
-public protocol AnyAtomicView {}
