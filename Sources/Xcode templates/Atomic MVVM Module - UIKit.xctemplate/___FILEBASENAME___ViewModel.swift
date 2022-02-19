@@ -44,6 +44,6 @@ extension ___FILEBASENAME___ {
     typealias Context = Void
     typealias Dependencies = Void
     typealias Emitted = Void
-    typealias Listenned = Void
+    typealias Listened = Void
 
 }

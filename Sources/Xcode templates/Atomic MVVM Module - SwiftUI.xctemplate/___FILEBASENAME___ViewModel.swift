@@ -51,6 +51,6 @@ extension ___FILEBASENAME___ {
     // Binding mechanism is already provided by @State var emitted: Emitted = Emitted().
     // In views please just use values directly from emitted variable.
     typealias Emitted = Void
-    typealias Listenned = Void
+    typealias Listened = Void
 
 }

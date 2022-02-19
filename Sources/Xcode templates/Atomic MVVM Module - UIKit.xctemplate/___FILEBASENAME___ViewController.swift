@@ -45,7 +45,7 @@ extension ___FILEBASENAME___ {
 
     typealias Context = ViewModel.Context
     typealias Dependencies = ViewModel.Dependencies
-    typealias Emitted = ViewModel.Listenned
-    typealias Listenned = ViewModel.Emitted
+    typealias Emitted = ViewModel.Listened
+    typealias Listened = ViewModel.Emitted
 
 }
